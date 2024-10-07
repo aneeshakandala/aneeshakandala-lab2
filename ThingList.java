@@ -50,7 +50,7 @@ import java.util.Random;
       while (temp != null){//checking if temp is null 
           temp.data.maybeTurn(rand);//calling on maybeturn
           temp.data.step();//calling step 
-          temp = temp.next;//moving to next node
+          temp = temp.next;//moving to next node 
       }
     }
   }
