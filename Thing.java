@@ -20,15 +20,15 @@ public abstract class Thing extends ThingList {
       }
 
     public void rightTurn() {
-        dir = (dir + 1) % 4;//direction dictating "right" code
+        dir = (dir + 1) % 4;//direction dictating "right" turn 
       }
     
     public void leftTurn() {
-        dir = (dir + 3) % 4;//direction dictating ""
+        dir = (dir + 3) % 4;//direction dictating "left" turn
       }
 
     public String toString(){
-        return (this.row + " " + this.col + " " + this.lab);
+        return (this.row + " " + this.col + " " + this.lab);//creation of toString, as specified in main 
       }
 
     public abstract void maybeTurn(Random rand);

@@ -17,40 +17,40 @@ import java.util.Random;
     }
 
     public void addThing(Thing t){
-      Node newnode = new Node();
-      newnode.data = t;
+      Node newnode = new Node();//newnode to be added
+      newnode.data = t;//data associated with new node
 
-      if (head == null){
-        head = newnode; 
+      if (head == null){//checking is head is null
+        head = newnode;//if so, setting newnode as head
         return; 
       }
 
-    Node temp = head; 
+    Node temp = head; //creating temp node, setting it to "head"
 
-      while(temp.next != null){
-        temp = temp.next;
+      while(temp.next != null){//checking if temp is null
+        temp = temp.next;//moving node, moving until last node is reached
       }
 
-      temp.next = newnode; 
-      newnode.next = null;
+      temp.next = newnode;//setting temp.next to new node, effectively newnode to the "tail" of the list
+      newnode.next = null;//setting "null" for what is after the last node, indicating the end of the list
     }
 
-    public void printAll(){
-      Node temp = head; 
-      while (temp != null){
-        System.out.println(temp.data.toString()); 
-        temp = temp.next;
+    public void printAll(){//printAll method 
+      Node temp = head; //creating temp node, setting to head 
+      while (temp != null){//checking if temp is null
+        System.out.println(temp.data.toString()); //output toString
+        temp = temp.next;//moving to next node
       }
       System.out.println("done"); 
       System.out.flush(); 
     }
 
-    public void moveAll(Random rand){ 
-     Node temp = head; 
-      while (temp != null){
-          temp.data.maybeTurn(rand);
-          temp.data.step();
-          temp = temp.next;
+    public void moveAll(Random rand){ //moveAll method
+     Node temp = head; //creating temp node, seting to head
+      while (temp != null){//checking if temp is null 
+          temp.data.maybeTurn(rand);//calling on maybeturn
+          temp.data.step();//calling step 
+          temp = temp.next;//moving to next node
       }
     }
   }
