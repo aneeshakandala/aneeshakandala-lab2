@@ -11,20 +11,20 @@ public class TypeC extends Thing{
     public void maybeTurn(Random rand) {//calling on maybeturn
         // FOR REFERENCE: dir: 0=North, 1=East, 2=South, 3=West.
 
-        int i = rand.nextInt(5);//setting bound to 5 for more options
+        int i = rand.nextInt(5);//setting bound to 5 for more options for turns
 
         timeSinceLast++;//increment timeSinceLast
     
-        if (timeSinceLast == 100) {//makes decision every 100 rounds 
+        if (timeSinceLast == 100) {//makes decision every 100 rounds
           timeSinceLast = 0;
         
             if (i == 0 || i == 2) {
-                rightTurn();//turning right on certain ints to create a sporatic pattern 
+                rightTurn();//turning right on certain ints to create a randomized pattern 
                 }
             }
     
             if (i == 3 || i == 5) {
-                leftTurn();//turning left on certain ints to create a sporatic pattern 
+                leftTurn();//turning left on certain ints to create a randomized pattern 
         }
 
             else {//not turning on int 4 (straight) for different pattern 

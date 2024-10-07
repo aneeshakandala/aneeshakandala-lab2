@@ -37,21 +37,27 @@ import java.util.Random;
 
     public void printAll(){//printAll method 
       Node temp = head; //creating temp node, setting to head 
+      
       while (temp != null){//checking if temp is null
         System.out.println(temp.data.toString()); //output toString
         temp = temp.next;//moving to next node
       }
+
       System.out.println("done"); 
       System.out.flush(); 
+
     }
 
     public void moveAll(Random rand){ //moveAll method
      Node temp = head; //creating temp node, seting to head
+     
       while (temp != null){//checking if temp is null 
+
           temp.data.maybeTurn(rand);//calling on maybeturn
           temp.data.step();//calling step 
           temp = temp.next;//moving to next node 
       }
+
     }
   }
 

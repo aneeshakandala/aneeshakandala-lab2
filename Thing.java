@@ -31,6 +31,6 @@ public abstract class Thing extends ThingList {
         return (this.row + " " + this.col + " " + this.lab);//creation of toString, as specified in main 
       }
 
-    public abstract void maybeTurn(Random rand);
+    public abstract void maybeTurn(Random rand);//abstract method maybeTurn
 
   }
